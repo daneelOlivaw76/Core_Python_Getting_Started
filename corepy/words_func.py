@@ -14,5 +14,5 @@ def fetch_words():
     string = string.rstrip() + '.'
     print(string)
 
-if __name__ == __main__:
+if __name__ == '__main__':
     fetch_words()
