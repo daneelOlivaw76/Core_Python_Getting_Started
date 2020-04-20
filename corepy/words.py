@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 """Retrieve and print words from a URL.
 Usage:
     python3 words.py <URL>
@@ -5,6 +7,7 @@ Usage:
 
 import sys
 from urllib.request import urlopen
+
 
 def fetch_words(url):
     """Fetch a list of words from a URL.
@@ -24,6 +27,7 @@ def fetch_words(url):
     story.close()
     return story_words
 
+
 def print_items(items):
     """Print items in a paragraph
         Args:
@@ -37,6 +41,7 @@ def print_items(items):
     string = string.rstrip() + '.'
     print(string)
 
+
 def main(url):
     """Print each word from a text document gotten from a URL.
         Args:
@@ -47,7 +52,8 @@ def main(url):
     print_items(words)
 
 if __name__ == '__main__':
+    # The 0th arg is the module filename.
     main(sys.argv[1])
 
 
-# 'http://sixty-north.com/c/t.txt'
+# mock url: 'http://sixty-north.com/c/t.txt'
